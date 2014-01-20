@@ -20,16 +20,16 @@ public class TextService {
     
     List<Conversation> convos = new ArrayList<Conversation>();
     
-    Conversation c1 =  createConvo();
+    Conversation c1 =  createConvo(userId);
     convos.add( c1 );
     
     return convos;
     
   }
   
-  Conversation createConvo(){
+  Conversation createConvo(String userId){
   
-    User user = userService.getByUserId("jwlsh");    
+    User user = userService.getByUserId(userId);    
   
     Conversation convo = new Conversation();
     convo.setFrom("Andrea");
